@@ -35,21 +35,25 @@ This repository contains a Python-based prototype for Retrieval-Augmented Genera
 1. Contextual Mismatch During Retrieval:
 
 Problem: The DPR retriever occasionally returned irrelevant contexts due to minor variations in sentence structure or vocabulary mismatches between the query and contexts.
+
 Solution: Fine-tuning the example passages helped improve the retrieval accuracy. Additionally, experimenting with DPR's pre-trained models provided more refined retrieval results for specific types   of queries.
 
 3. Length Constraints with BART Generation:
 
 Problem: The BART model sometimes truncated answers, especially for longer queries or complex contexts, leading to incomplete responses.
+
 Solution: Adjusting the max_length parameter and tuning the number of beams for beam search during answer generation helped to balance between length and quality of the generated responses.
 
 4. Efficiency in Embedding Calculation:
 
 Problem: Encoding large sets of contexts was initially slow and inefficient, particularly during development and testing phases with a large knowledge base.
+
 Solution: Batch encoding of contexts was implemented to reduce computational time, and GPU acceleration via PyTorch was utilized to speed up the embedding process.
 
 6. Handling Contexts with Multiple Semantics:
 
 Problem: Some contexts had overlapping semantic meanings, making it difficult for the retriever to distinguish them accurately.
+
 Solution: Adding additional context passages and refining the knowledge base helped improve the retrieval process by increasing the diversity of the dataset, allowing for better distinction between    similar passages.
 
 # Key Features
