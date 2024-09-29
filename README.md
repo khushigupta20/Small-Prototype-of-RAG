@@ -34,7 +34,8 @@ This repository contains a Python-based prototype for Retrieval-Augmented Genera
 # Challenges Faced and Solutions
 1. Contextual Mismatch During Retrieval:
 
-Problem: The DPR retriever occasionally returned irrelevant contexts due to minor variations in sentence structure or vocabulary mismatches between the query and contexts.Solution: Fine-tuning the example passages helped improve the retrieval accuracy. Additionally, experimenting with DPR's pre-trained models provided more refined retrieval results for specific types   of queries.
+Problem: The DPR retriever occasionally returned irrelevant contexts due to minor variations in sentence structure or vocabulary mismatches between the query and contexts.
+Solution: Fine-tuning the example passages helped improve the retrieval accuracy. Additionally, experimenting with DPR's pre-trained models provided more refined retrieval results for specific types   of queries.
 
 3. Length Constraints with BART Generation:
 
